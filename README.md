@@ -2,7 +2,8 @@
 
 ### At glance
 Video: https://www.youtube.com/watch?v=Zkd1riFMd-8
-Blueprint example project: 
+
+Blueprint example project: [Here](https://github.com/AndreaCatania/GoddessSoundVisualizer/blob/master/GoddessSoundVis.rar?raw=true)
 
 Allow you to create a visualizer of sound with blueprint. While other visualizer are not working out of editor this plugin works well.
 
