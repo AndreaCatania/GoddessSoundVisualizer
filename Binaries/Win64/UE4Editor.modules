@@ -1,0 +1,9 @@
+{
+	"Changelist" : 2946394,
+	"BuildId" : "2d9a09ba-c05b-4f72-861c-afcbdc086485",
+	"Modules" : 
+	{
+		"GoddessSoundVisualizer" : "UE4Editor-GoddessSoundVisualizer.dll",
+		"GoddessFrequencyImporter" : "UE4Editor-GoddessFrequencyImporter.dll"
+	}
+}

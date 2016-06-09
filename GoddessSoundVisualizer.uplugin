@@ -1,0 +1,38 @@
+{
+    "FileVersion": 3,
+    "FriendlyName": "Goddess Sound Visualizer",
+    "Version": 1,
+    "VersionName": "1.0",
+    "Description": "This plugin defines the classes to handle/visualize frequency spectrum of a sound.",
+    "Category": "AndreaCatania.Sound",
+    "CreatedBy": "AndreaCatania",
+    "CreatedByURL": "andreacatania.com",
+    "CanContainContent": "true",
+    "Modules": [
+        {
+            "Name": "GoddessSoundVisualizer",
+            "Type": "Developer",
+            "LoadingPhase": "PreDefault"
+        },
+        {
+            "Name": "GoddessSoundVisualizer",
+            "Type": "Editor",
+            "LoadingPhase": "PreDefault"
+        },
+        {
+            "Name": "GoddessSoundVisualizer",
+            "Type": "Runtime",
+            "LoadingPhase": "PreDefault"
+        },
+        {
+            "Name": "GoddessFrequencyImporter",
+            "Type": "Editor",
+            "LoadingPhase": "PostEngineInit"
+        },
+        {
+            "Name": "GoddessFrequencyImporter",
+            "Type": "Developer",
+            "LoadingPhase": "PostEngineInit"
+        }
+    ]
+}
