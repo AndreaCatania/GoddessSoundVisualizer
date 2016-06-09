@@ -11,6 +11,9 @@ This plugin uses low resources, because all data needed are precalculated during
 
 Controll your sound overtime using Play, Stop, Pause, Resume functions directly on Blueprint. Visualize the sound by catch **OnUpdateFrequency** event and then create the effect you want.
 
+## How Works
+// To write
+
 ## How to install
 // To write
 
