@@ -30,7 +30,16 @@ public:
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaSeconds) override;
 
+	/** 
+	 * This function calls Blueprint implementable event function "BP_OnUpdateFrequency" so if you override this and you need Bluepirnt event you must call it manually.
+	 * (This is done for performance reason when you want only c++ running)
+	 */
 	virtual void OnUpdateFrequency(struct FFrequencyBands FrequencyBands);
+
+	/**
+	 * This function calls Blueprint implementable event function "BP_OnAudioFinished" so if you override this and you need Bluepirnt event you must call it manually.
+	 * (This is done for performance reason when you want only c++ running)
+	 */
 	UFUNCTION()
 	virtual void OnAudioFinished();
 
@@ -54,6 +63,7 @@ public:
 	UFUNCTION(BlueprintImplementableEvent, Category = Event, DisplayName = OnUpdateFrequency)
 	void BP_OnUpdateFrequency(float SubBass, float Bass, float LowMidrange, float Midrange, float UpperMidrange, float Presence, float Brilliance);
 
+	/** Called only when the Audio finished */
 	UFUNCTION(BlueprintImplementableEvent, Category = Event, DisplayName = OnAudioFinished)
 	void BP_OnAudioFinished();
 
