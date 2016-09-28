@@ -2,6 +2,7 @@
 
 ### At glance
 Video: https://www.youtube.com/watch?v=Zkd1riFMd-8
+How to import and visualize: https://youtu.be/JOrl5a6-EhU
 
 Blueprint example project: [Here](https://github.com/AndreaCatania/GoddessSoundVisualizer/blob/master/GoddessSoundVis.rar?raw=true)
 
