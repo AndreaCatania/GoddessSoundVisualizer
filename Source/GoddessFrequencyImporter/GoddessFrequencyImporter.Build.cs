@@ -1,28 +1,24 @@
-// Author AndreaCatania
+/// GoddessSoundVisualizer plugin for UnrealEngine
+/// Author AndreaCatania
 
-using UnrealBuildTool;
-
-public class GoddessFrequencyImporter : ModuleRules
+namespace UnrealBuildTool.Rules
 {
-	public GoddessFrequencyImporter(TargetInfo Target)
-	{
-		
-		PublicIncludePaths.AddRange(new string[] {"GoddessFrequencyImporter/Public"});
-				
-		
-		PrivateIncludePaths.AddRange(new string[] {"GoddessFrequencyImporter/Private"});
-			
-		
-		PublicDependencyModuleNames.AddRange(
-			new string[]
-			{
-				  "Core"
+    public class GoddessFrequencyImporter : ModuleRules{
+        public GoddessFrequencyImporter(ReadOnlyTargetRules Target) : base(Target){
+            PublicIncludePaths.AddRange(new string[] { "GoddessFrequencyImporter/Public" });
+            
+            PrivateIncludePaths.AddRange(new string[] { "GoddessFrequencyImporter/Private" });
+            
+            PublicDependencyModuleNames.AddRange(
+                new string[]
+                {
+                  "Core"
                 , "CoreUObject"
                 , "Engine"
                 , "Kiss_FFT"
                 , "GoddessSoundVisualizer"
                 , "UnrealEd"
-            });
-
+                });
+        }
     }
 }

@@ -1,10 +1,14 @@
 # Goddess Sound Visualizer
 
+### Min unreal version
+UE 4.15
+Check [compile section](#comp_sec) for more info.
+
 ### At glance
 Video: https://www.youtube.com/watch?v=Zkd1riFMd-8
 How to import and visualize: https://youtu.be/JOrl5a6-EhU
 
-Blueprint example project: [Here](https://github.com/AndreaCatania/GoddessSoundVisualizer/blob/master/GoddessSoundVis.rar?raw=true)
+Blueprint example project UE4.16: [Here](https://github.com/AndreaCatania/GoddessSoundVisualizer/blob/master/GoddessSoundVis_4.16.rar?raw=true)
 
 Allow you to create a visualizer of sound with blueprint. While other visualizer are not working out of editor this plugin works well.
 
@@ -15,7 +19,7 @@ Controll your sound overtime using Play, Stop, Pause, Resume functions directly 
 ---
 
 ## How to install
-// To write
+// TODO
 
 ---
 
@@ -52,6 +56,11 @@ That's it, now you can set this frequency spectrum in **Play** function and visu
 
 Check the example project.
 
+
+---
+## Compiling {#comp_sec}
+If you are using Windows 64bit with UE4.16 you can use directly the binaries that are in /Binaries folder.
+If you are on other type of machine Win32 / Linux / etc... or other engine version you must compile the plugin.
 
 ---
 ## License

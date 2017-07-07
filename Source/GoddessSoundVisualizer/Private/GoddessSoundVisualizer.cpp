@@ -30,8 +30,8 @@ void AGoddessSoundVisualizer::BeginPlay()
 void AGoddessSoundVisualizer::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
-
-	if (nullptr != ActiveSound && ActiveSound->IsAudioComponentValid()) {
+	
+	if (nullptr != ActiveSound) {
 		OnUpdateFrequency(SoundFrequencySpectrum->FindFrequencyBands(ActiveSound->RequestedStartTime + ActiveSound->PlaybackTime));
 	}
 }
@@ -64,7 +64,7 @@ void AGoddessSoundVisualizer::Play(USoundBase* Sound, USoundFrequencySpectrum* I
 		// Play Sound
 		MainAudioComponent->Play(.0f);
 
-		ActiveSound = AudioDevice->FindActiveSound(MainAudioComponent);
+		ActiveSound = AudioDevice->FindActiveSound(MainAudioComponent->GetAudioComponentID());
 		if (nullptr == ActiveSound) {
 			LoggerWarning(TEXT("Play function - ActiveSound is nullptr probably no sound is on"));
 			// Block Tick execution
@@ -87,7 +87,7 @@ void AGoddessSoundVisualizer::Stop() {
 }
 
 void AGoddessSoundVisualizer::Pause() {
-	if (nullptr != ActiveSound && ActiveSound->IsAudioComponentValid()) {
+	if (nullptr != ActiveSound) {
 		FinishedArtificially = true;
 		PlaybackTimePaused = ActiveSound->RequestedStartTime + ActiveSound->PlaybackTime;
 		ActiveSound = nullptr;
@@ -110,7 +110,7 @@ void AGoddessSoundVisualizer::Resume() {
 			FinishedArtificially = false;
 			PlaybackTimePaused = -1;
 
-			ActiveSound = AudioDevice->FindActiveSound(MainAudioComponent);
+			ActiveSound = AudioDevice->FindActiveSound(MainAudioComponent->GetAudioComponentID());
 			if (nullptr == ActiveSound) {
 				LoggerWarning(TEXT("Resume function - ActiveSound is nullptr probably no sound is on"));
 				// Block Tick execution

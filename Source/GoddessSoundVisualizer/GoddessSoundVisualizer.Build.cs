@@ -1,13 +1,19 @@
+/// GoddessSoundVisualizer plugin for UnrealEngine
+/// Author AndreaCatania
+
 using UnrealBuildTool;
 using System.IO;
 
-public class GoddessSoundVisualizer : ModuleRules
+namespace UnrealBuildTool.Rules
 {
-    public GoddessSoundVisualizer(TargetInfo Target)
+    public class GoddessSoundVisualizer : ModuleRules
     {
-        PrivateIncludePaths.AddRange(new string[] { "GoddessSoundVisualizer/Private" });
-        PublicIncludePaths.AddRange(new string[] { "GoddessSoundVisualizer/Public" });
+        public GoddessSoundVisualizer(ReadOnlyTargetRules Target) : base(Target)
+        {
+            PrivateIncludePaths.AddRange(new string[] { "GoddessSoundVisualizer/Private" });
+            PublicIncludePaths.AddRange(new string[] { "GoddessSoundVisualizer/Public" });
 
-        PublicDependencyModuleNames.AddRange(new string[] { "Engine", "Core", "InputCore", "CoreUObject" });
+            PublicDependencyModuleNames.AddRange(new string[] { "Engine", "Core", "InputCore", "CoreUObject" });
+        }
     }
 }
