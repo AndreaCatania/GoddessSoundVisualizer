@@ -2,7 +2,7 @@
 
 ### Min unreal version
 UE 4.15
-Check [compile section](#comp_sec) for more info.
+Check **compile** section for more info.
 
 ### At glance
 Video: https://www.youtube.com/watch?v=Zkd1riFMd-8
@@ -58,7 +58,8 @@ Check the example project.
 
 
 ---
-## Compiling {#comp_sec}
+
+## Compile
 If you are using Windows 64bit with UE4.16 you can use directly the binaries that are in /Binaries folder.
 If you are on other type of machine Win32 / Linux / etc... or other engine version you must compile the plugin.
 
