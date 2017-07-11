@@ -37,7 +37,7 @@ public:
 	}
 };
 
-UCLASS()
+UCLASS(BlueprintType)
 class GODDESSSOUNDVISUALIZER_API USoundFrequencySpectrum : public UObject
 {
 	GENERATED_BODY()
